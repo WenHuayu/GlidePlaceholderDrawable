@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GlidePlaceholderDrawable</string>
+    <string name="refresh_image">刷新图片</string>
+    <string name="use_glide_placeholder_drawable">使用GlidePlaceholderDrawable</string>
+</resources>

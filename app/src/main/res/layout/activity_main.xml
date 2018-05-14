@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="HardcodedText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="ScaleType:" />
+
+            <RadioButton
+                android:id="@+id/rdo_center_inside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onClick"
+                android:text="CENTER_INSIDE" />
+
+            <RadioButton
+                android:id="@+id/rdo_center_crop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="CENTER_CROP" />
+
+            <RadioButton
+                android:id="@+id/rdo_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="CENTER" />
+
+            <RadioButton
+                android:id="@+id/rdo_fit_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="FIT_END" />
+
+            <RadioButton
+                android:id="@+id/rdo_fit_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="FIT_CENTER" />
+
+            <RadioButton
+                android:id="@+id/rdo_fit_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="FIT_START" />
+
+            <RadioButton
+                android:id="@+id/rdo_fit_xy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="FIT_XY" />
+
+            <RadioButton
+                android:id="@+id/rdo_matrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="MATRIX" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <CheckBox
+        android:id="@+id/cbx_use_glide_placeholder_drawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/use_glide_placeholder_drawable" />
+
+    <Button
+        android:id="@+id/btn_refresh_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/refresh_image" />
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11111111"
+        android:scaleType="centerInside"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+</LinearLayout>
