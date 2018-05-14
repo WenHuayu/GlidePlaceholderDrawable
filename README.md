@@ -1,3 +1,26 @@
+快捷使用帮助:
+
+[![](https://jitpack.io/v/WenHuayu/GlidePlaceholderDrawable.svg)](https://jitpack.io/#WenHuayu/GlidePlaceholderDrawable)
+
+Step 1. Add the JitPack repository to your build file
+
+        allprojects {
+          repositories {
+			...
+			maven { url 'https://jitpack.io' }
+          }
+        }
+
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.WenHuayu:GlidePlaceholderDrawable:1.0.0'
+	}
+
+Step 3. set placeholder
+
+    placeholder(new GlidePlaceholderDrawable(getResources(), R.drawable.placeholder)))
+
 在项目中使用到了Glide图片加载库，但是在使用中遇到一些奇葩的现象，这里记录一下，如果大家也遇到相同的问题可以参考一下。
 
 #####问题:当一次图片加载同时应用了placeholder占位符和crossFade过渡动画时，placeholder与图片的过渡非常不自然，有时候placeholder突变，有时候placeholder变形,十分影响视觉效果。
